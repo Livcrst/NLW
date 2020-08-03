@@ -1,0 +1,62 @@
+/* CSS - Cascading StyleSheet (E é assim que comenta no CSS) */
+
+:root{ /* Elemento principal de todo meu HTML/CSS */
+    --color-background: #F0F0F7; /* variaveis css */
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842c2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+    /* Tamanho da fonte : por padrão: 16 px - 100% - 1rem*/
+    font-size: 60%; /* controle das medidas rem */
+    /*rem é a fonte setada no root 
+      A porcentagem e o rem são relativos ao que está superior a ele
+      
+      */
+}
+
+/* Responsividade é a capacidade de se adaptar independente do tamanho do dispositivo. */
+
+
+* { /* O * significa vários elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+}
+
+body {
+    background: var(--color-background);
+    display: flex; /* exibição */
+    align-items: center; /* alinhamento */
+    justify-content: center ;
+
+}
+body, input, button,textarea{
+    font: 500 1.6rem Poppins;
+    /*
+    font-weight:  500; peso da fonte
+    font-family: Poppins; tipo da fonte
+    font-size: 1.6 rem; altura referente ao root.
+    */
+    color: var(--color-text-base);
+}
+#container{
+    width: 90vw; /* largura */
+    max-width: 700px;
+}
