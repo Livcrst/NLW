@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proffy | Sua plataforma de ensino online</title>
 
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="/styles/main.css"> 
+        <link rel="stylesheet" href="/styles/partials/page_landing.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap%22%20rel=%22stylesheet">
 
         <!-- Esse link aí usca no google fontes as fontes que estará sendo usada no ambiente. -->
 </head>
 <body id = "page_landing"> 
     <div id = "container"> <!-- É uma caixa de elementos-->
-        <h1>
-            Proffy </h1> <!-- Titulos-->
-        <p>
-            <span>aqui: </span>
-            Sua plataforma de estudos online
-        </p> <!-- Paragrafos-->
-        <img src="" alt="Logo"> <!--src é a origem da imagem, alt é alternativa para quando não tenho fonte. Serve para acessibilidade também.-->
-        <button>Estudar</button>
-        <button>Dar aula</button>
+      <!--  <h1>
+            Proffy </h1> Titulos--> 
+            <div class="logo_container">
+                <img src="/images/logo.svg" alt="Proffy">
+                <h2>Sua plataforma de estudos online</h2>
+            </div> 
+            <img class= "hero-image" src="/images/landing.svg" alt="/Plataforma de Estudos">
+
+     <!-- Paragrafos-->
+        <!--<img src="" alt="Logo"> src é a origem da imagem, alt é alternativa para quando não tenho fonte. Serve para acessibilidade também.-->
+        <div class="buttons-container">
+            <a class="study" href="/study.hmtl">
+            <img src="/images/icons/study.svg" alt="Estudar">
+            Estudar
+            
+        </a>
+        <a class="give-classes" href="/give-classes.html">
+            <img src="/images/icons/give-classes.svg" alt="Dar Aulas">
+            Dar aulas</a>
+        </div>
+        <p class="total-conections">
+            Total de 200 conexões já realizadas 
+            <img src="/images/icons/purple-heart.svg" alt="Coração roxo">
+            
+
+        </p>
     </div>
     
 </body>

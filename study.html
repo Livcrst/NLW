@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt_br"> <!-- lang é um atributo-->
+<head>
+    <meta charset="UTF-8"> <!-- Descreve propiedades especificas da pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proffy | Sua plataforma de ensino online</title>
+
+        <link rel="stylesheet" href="/styles/main.css"> 
+        <link rel="stylesheet" href="/styles/partials/page-study.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap%22%20rel=%22stylesheet">
+
+        <!-- Esse link aí usca no google fontes as fontes que estará sendo usada no ambiente. -->
+</head>
+<body id = "page-study"> 
+    <div id = "container"> 
+        <header class="page-header"> <!--Cabeçalho-->
+                <div class="top-bar-container">
+                    <a href="/">
+                        <!-- A referencia dela ta uma barra pq ela volta para o incio da page.-->
+                        <img src="/images/icons/back.svg" alt="Voltar">
+                    </a>
+                    <img src="/images/logo.svg" alt="Proffy">
+
+                </div>
+                
+                <div class="header-content">
+                    <strong>Esses são os proffys disponíveis
+                        <!--Essa tag serve para texto, vem por padrão com  o negrit o na fonte.-->
+                    </strong>
+                    <form id="search-teachers">
+                        <div class="select-block">
+                            <label for="subject">Matéria</label>
+                            <select name="subject" id="subject">
+                                <option value="" disabled="" hidden="">Selecione uma opção</option>
+                                <option value="1">Artes</option>
+                                <option value="2">Biologia</option>
+                                <option value="3">Ciências</option>
+                                <option value="4">Educação Física</option>
+                                <option value="5">Física</option>
+                                <option value="6">Geografia</option>
+                                <option value="7">História</option>
+                                <option value="8">Matemática</option>
+                                <option value="9">Português</option>
+                                <option value="10">Quimica</option>
+
+                            </select>
+
+                        </div>
+                        <div class="select-block">
+                            <label for="Weekday">Dia da semana</label>
+                            <select name="weekday" id="weekday">
+                                <option value="" disabled="" hidden="">Selecopne uma opção</option>
+                                <option value="0">Domingo</option>
+                                <option value="1">Segunda</option>
+                                <option value="2">Terça</option>
+                                <option value="3">Quarta</option>
+                                <option value="4">Quinta</option>
+                                <option value="5">Sexta</option>
+                                <option value="6">Sábado</option>
+
+                            </select>
+
+                        </div>
+                        <div class="input-block">
+                            <label for="time">Hora</label>
+                            <input name="time" id= "time"type="time" min="0" max="24">
+                        </div>
+
+                        <button type="submit">Filtrar</button> <!--Botão do tipo submit envia dados-->
+
+                    </form>
+                </div>
+
+        </header>
+        <main>
+            <article class="teacher-item">
+                <header>
+                    <img src="https://avatars2.githubusercontent.com/u/50409673?s=460&u=e4b29e5e96514bfabb7c8620d43b53a4ac00f959&v=4" alt="Lívia Nascimento">
+                    <div>
+                        <strong> Lívia Nascimento</strong>
+                        <span>Matemática</span>
+                    </div>
+                </header>
+                <p>
+                    Entusiastas das melhores tecnologias de matemática avançada. <br><br> Apaixonada por explodir coisas emm laboratório e por mudar a vidas pessoas através de experiências. Mais de 200.000 pessoas já passaram por aqui uma das minhas explosões.
+                </p>
+                <footer>
+                    <p>Preço/hora <strong>R$ 20.00</strong></p>
+                    <button type="button">
+                            <img src="images/icons/whatsapp.svg" alt="whatsapp"> 
+                            Entrar em contato
+                    </button>
+                </footer>
+            </article>
+            <article class="teacher-item">
+                <header>
+                    <img src="https://avatars2.githubusercontent.com/u/50409673?s=460&u=e4b29e5e96514bfabb7c8620d43b53a4ac00f959&v=4" alt="Lívia Nascimento">
+                    <div>
+                        <strong> Lívia Nascimento</strong>
+                        <span>Matemática</span>
+                    </div>
+                </header>
+                <p>
+                    Entusiasta das melhores tecnologias de matemática avançada. <br><br> Apaixonada por explodir coisas emm laboratório e por mudar a vidas pessoas através de experiências. Mais de 200.000 pessoas já passaram por aqui uma das minhas explosões.
+                </p>
+                <footer>
+                    <p>Preço/hora <strong>R$ 20.00</strong></p>
+                    <button type="button">
+                            <img src="images/icons/whatsapp.svg" alt="whatsapp"> 
+                            Entrar em contato
+                    </button>
+                </footer>
+            </article>
+        </main>
+    </div>
+    
+</body>
+</html>
+
