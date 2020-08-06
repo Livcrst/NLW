@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap%22%20rel=%22stylesheet">
 
         <!-- Esse link aí usca no google fontes as fontes que estará sendo usada no ambiente. -->
+
+        <script src="/scripts/addField.js" defer></script> <!--Este defer significa leia depois-->
+        
 </head>
 <body id = "page-give-classes"> 
     <div id = "container"> 
@@ -54,10 +57,124 @@
                     </div>
 
                 </fieldset>
+                <fieldset>
+                    <div class="select-block">
+                        <legend>Sobre a aula</legend>
+                        <label for="subject">Matéria</label>
+                        <select name="subject" id="subject">
+                            <option value="0" >Selecione uma opção</option>
+                            <option value="1">Artes</option>
+                            <option value="2">Biologia</option>
+                            <option value="3">Ciências</option>
+                            <option value="4">Educação Física</option>
+                            <option value="5">Física</option>
+                            <option value="6">Geografia</option>
+                            <option value="7">História</option>
+                            <option value="8">Matemática</option>
+                            <option value="9">Português</option>
+                            <option value="10">Quimica</option>
+
+                        </select>
+                        <div class="input-block">
+                            <label for="cost"> Custo da sua hora/aula
+                                <small>(R$)</small>
+                            </label>
+                            <input type="number" id="cost" required >
+                        </div>
+                </fieldset>
+
+                <fieldset id="schedule-items">
+                    <legend>Horários disponíveis
+                        <button id="add-time">+ Novo Horário</button>
+                    </legend>
+
+                    <div class="schedule-item">
+
+                        <div class="select-block">
+                            <label for="weekday">Dia da semana</label>
+                                <select name="weekday[]" id="weekday">
+                                    <!-- Esses colchetes junto ao name significa que no backend terie um agrupamento de entradas do meu select, isto é, posso selecionar mais de uma opção no bloco.-->
+                            
+                                        <option value="" > Selecione uma opção</option>
+                                        <option value="1">Domingo</option>
+                                        <option value="2">Segunda</option>
+                                        <option value="3">Terça</option>
+                                        <option value="4">Quarta</option>
+                                        <option value="5">Quinta</option>
+                                        <option value="6">Sexta</option>
+                                        <option value="7">Sábado</option>
+
+                                </select>
+
+                        </div>
+                        <div class="input-block">
+
+
+                            <label for="time_from">Das</label>
+                            <input type="time" name="time_from[]" required>
+                            
+
+                        </div>
+                        <div class="input-block">
+
+
+                            <label for="time_to">Até</label>
+                            <input type="time" name="time_to[]" required>
+                            
+
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+
+                        <div class="select-block">
+                            <label for="weekday">Dia da semana</label>
+                                <select name="weekday[]" id="weekday">
+                                    <!-- Esses colchetes junto ao name significa que no backend terie um agrupamento de entradas do meu select, isto é, posso selecionar mais de uma opção no bloco.-->
+                            
+                                        <option value="" > Selecione uma opção</option>
+                                        <option value="1">Domingo</option>
+                                        <option value="2">Segunda</option>
+                                        <option value="3">Terça</option>
+                                        <option value="4">Quarta</option>
+                                        <option value="5">Quinta</option>
+                                        <option value="6">Sexta</option>
+                                        <option value="7">Sábado</option>
+
+                                </select>
+
+                        </div>
+                        <div class="input-block">
+
+
+                            <label for="time_from">Das</label>
+                            <input type="time" name="time_from[]" required>
+                            
+
+                        </div>
+                        <div class="input-block">
+
+
+                            <label for="time_to">Até</label>
+                            <input type="time" name="time_to[]" required>
+                            
+
+                        </div>
+                    </div>
+                </fieldset>
             </form>
+                <footer>
+                    <p>
+                        <img src="/images/icons/warning.svg" alt="Aviso importante">
+                        Importante! <br> <!-- a tag br serve para dar quebra de linha -->
+                        Preencha todos os dados.
+                    </p>
+                    <button type="submit" form="creat-class">Salvar cadastro</button>
+                    <!--Todo formulario a ter um botom do tipo submit precisa que o mesmo esteja dentro do form, quando fora, é nescessário por o id do form na desc do botom que é para avisar qual a função do botão, isto é, para onde ele vai -->
+                </footer>
   
         </main>
     </div>
+    
     
 </body>
 </html>
