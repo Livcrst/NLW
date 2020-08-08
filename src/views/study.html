@@ -35,16 +35,12 @@
                             <label for="subject">Matéria</label>
                             <select name="subject" id="subject">
                                 <option value="" disabled="" hidden="">Selecione uma opção</option>
-                                <option value="1">Artes</option>
-                                <option value="2">Biologia</option>
-                                <option value="3">Ciências</option>
-                                <option value="4">Educação Física</option>
-                                <option value="5">Física</option>
-                                <option value="6">Geografia</option>
-                                <option value="7">História</option>
-                                <option value="8">Matemática</option>
-                                <option value="9">Português</option>
-                                <option value="10">Quimica</option>
+
+                                {% for subject in subjects %}
+                                  <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }} >
+                                    {{ subject }}
+                                  </option>
+                                {% endfor %}
 
                             </select>
 
@@ -52,21 +48,19 @@
                         <div class="select-block">
                             <label for="Weekday">Dia da semana</label>
                             <select name="weekday" id="weekday">
-                                <option value="" >Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda</option>
-                                <option value="2">Terça</option>
-                                <option value="3">Quarta</option>
-                                <option value="4">Quinta</option>
-                                <option value="5">Sexta</option>
-                                <option value="6">Sábado</option>
+                                <option value="" disabled="" hidden="">Selecione uma opção</option>
+                                {%for weekday in weekdays %}
+                                <option value="{{loop.index}}" {{"selected" if filters.weekdays == loop.index }}>
+                                    {{weekday}}
+                                </option>
+                                {%endfor%}
 
                             </select>
 
                         </div>
                         <div class="input-block">
                             <label for="time">Hora</label>
-                            <input name="time" id= "time"type="time" min="0" max="24">
+                            <input name="time" id= "time" type="time" value="{{filters.time}}">
                         </div>
 
                         <button type="submit">Filtrar</button> <!--Botão do tipo submit envia dados-->
@@ -76,44 +70,33 @@
 
         </header>
         <main>
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars2.githubusercontent.com/u/50409673?s=460&u=e4b29e5e96514bfabb7c8620d43b53a4ac00f959&v=4" alt="Lívia Nascimento">
-                    <div>
-                        <strong> Lívia Nascimento</strong>
-                        <span>Matemática</span>
-                    </div>
-                </header>
-                <p>
-                    Entusiastas das melhores tecnologias de matemática avançada. <br><br> Apaixonada por explodir coisas emm laboratório e por mudar a vidas pessoas através de experiências. Mais de 200.000 pessoas já passaram por aqui uma das minhas explosões.
-                </p>
-                <footer>
-                    <p>Preço/hora <strong>R$ 20.00</strong></p>
-                    <button type="button">
-                            <img src="images/icons/whatsapp.svg" alt="whatsapp"> 
-                            Entrar em contato
-                    </button>
-                </footer>
-            </article>
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars0.githubusercontent.com/u/37520136?s=460&u=9c6b20941f80c7d21cdf0d346151bf5d38015350&v=4" alt="Samilly Nunes">
-                    <div>
-                        <strong> Samilly Nunes</strong>
-                        <span>Flutter Development</span>
-                    </div>
-                </header>
-                <p>
-                    Entusiasta das artes computacionais avançadas. <br><br> Apaixonada por desenvolver soluções que podem mudar a vidas pessoas através de suas experiências. Mais de 200.000 pessoas já passaram por aqui uma das minhas explosões.
-                </p>
-                <footer>
-                    <p>Preço/hora <strong>R$ 50.00</strong></p>
-                    <button type="button">
-                            <img src="images/icons/whatsapp.svg" alt="whatsapp"> 
-                            Entrar em contato
-                    </button>
-                </footer>
-            </article>
+
+            {% for proffy in proffys %}
+                <!-- repetição possivel com o uso do -->
+                <article class="teacher-item">
+                    <header>
+                        <img src="{{proffy.avatar}}"
+                             alt="{{proffy.name}}">
+                        <div>
+                            <strong>{{proffy.name}}</strong>
+                            <span>{{proffy.subject}}</span>
+                        </div>
+                    </header>
+                    <p>
+                        {{proffy.bio}}
+                    </p>
+
+                    <footer>
+                        <p>Preço/hora <strong>R$ {{proffy.cost}}</strong></p>
+                        <a href="https://api.whatsapp.com/send?l=pt_BR&phone=55{{proffy.whatsapp}}&tex=Tenho interesse em sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
+                                <img src="images/icons/whatsapp.svg" alt="whatsapp">Entrar em contato      
+                        </a>
+                    
+                    </footer>
+                </article>
+
+            {%endfor%}
+    
         </main>
     </div>
     
