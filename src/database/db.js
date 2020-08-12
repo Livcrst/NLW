@@ -1,4 +1,4 @@
-const Database = require('sqlite-async') //Esse then significa então 
+const Database = require('sqlite-async'); //Esse then significa então 
 
 
 function execute(db){
