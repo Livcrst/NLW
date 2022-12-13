@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Livcrst/NLW#readme",
   "dependencies": {
     "assync": "^1.0.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nunjucks": "^3.2.2",
     "sqlite": "^4.0.12",
     "sqlite-async": "^1.1.0"
